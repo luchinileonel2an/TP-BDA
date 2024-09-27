@@ -33,6 +33,8 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
         <div class="row">
             <div class="col-lg-12">
                 <button id="btnNuevo" type="button" class="btn btn-success">Nuevo</button>
+                <button id="btnVentas" type="submit" class="btn btn-info" onclick="goVentas()">Ventas</button>
+                <button onclick="goStock()" type="submit" class="btn btn-warning">Stock</button>
             </div>
         </div>
     </div>
@@ -96,7 +98,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-light" onclick="$('#miModal').modal('hide');">Cancelar</button>
-                <button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
+            <button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
             </div>
         </form>    
         </div>
@@ -108,6 +110,15 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
     <script src="..\..\bootstrap\js\bootstrap.min.js"></script>
     <script type="text/javascript" src="../../datatables/datatables.min.js"></script>
     <script type="text/javascript" src="../administrador/main.js"></script>
+    <script>    function goVentas() {
+        window.location.href = 'ventas.php';
+    }
+    
+    function goStock() {
+        window.location.href = 'stock.php';
+    }
+    
+    </script>
 </body>
 
 </html>
